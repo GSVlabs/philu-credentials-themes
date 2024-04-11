@@ -1,8 +1,11 @@
+{% load i18n %}
+{% load static %}
+
 <div class="wrapper-header">
     <header class="header-app" role="banner">
         <h1 class="header-app-title">
             <a class="logo" href="{{ site.siteconfiguration.lms_url_root }}">
-              <img class="logo-img" src="{{site_logo_url}}" alt="{% firstof platform_name site.name%}" />
+              <img class="logo-img" src="{% static 'edx.org/images/logo.svg' %}" alt="{% firstof platform_name site.name%}">
             </a>
             <span class="sr-only">{% firstof site.name platform_name %}</span>
         </h1>

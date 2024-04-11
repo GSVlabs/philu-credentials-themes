@@ -1,51 +1,68 @@
 {% load i18n %}
 {% load static %}
 
-<div class="wrapper-footer">
-  <footer class="footer-app small" role="contentinfo">
-      <div class="footer-app-legal">
-          <nav class="footer-app-nav" aria-label="{% trans 'Legal Policies' %}">
-              <ul class="list list-legal">
-                  <li class="nav-item">
-                      <a class="action" href="{{ site.siteconfiguration.tos_url }}">
-                          {% trans "Terms of Service & Honor Code" as tmsg %}{{ tmsg | force_escape }}
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="action" href="{{ site.siteconfiguration.privacy_policy_url }}">
-                          {% trans "Privacy Policy" as tmsg %}{{ tmsg | force_escape }}
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="action" href="https://www.edx.org/edx-privacy-policy/cookies">
-                          {% trans "Cookie Policy" as tmsg %}{{ tmsg | force_escape }}
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="action" href="https://www.edx.org/?opendns=true">
-                          {% trans "Your Privacy Choices" as tmsg %}{{ tmsg | force_escape }}
-                      </a>
-                  </li>
-              </ul>
-          </nav>
-          <div class="copyright-trademarks">
-              <p class="copy">
-                  <span class="copyright">&copy; {% now "Y" %}
-                      <a href="{{ site.siteconfiguration.homepage_url }}">{{ site.siteconfiguration.company_name }}</a>
-                  </span>
-                  {% trans "All rights reserved except where noted. edX, Open edX and the edX and Open edX logos are registered trademarks or trademarks of edX Inc." as tmsg%}
-                  {{ tmsg | force_escape }}
-              </p>
-          </div>
-      </div>
-      <div class="footer-app-related">
-          <a class="img-link" href="https://open.edx.org/">
-            <img
-                class="logo-img logo-openedx"
-                src="{{ openedx_logo_url }}"
-                alt="{% trans 'Powered by' as tmsg %}{{tmsg | force_escape}} Open edX"
-            />
-          </a>
-      </div>
-  </footer>
-</div>
+<footer class="wrapper wrapper-footer">
+    <div class="holder">
+        <nav>
+            <ul class="footer-nav-list">
+                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.lms_url_root }}/about">{% trans "About" as tmsg %}{{ tmsg | force_escape }}</a></li>
+                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.privacy_policy_url }}">{% trans "Privacy Policy" as tmsg %}{{ tmsg | force_escape }}</a></li>
+                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.tos_url }}">{% trans "Terms of Service" as tmsg %}{{ tmsg | force_escape }}</a></li>
+                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.lms_url_root }}/support/contact_us">{% trans "Contact Us" as tmsg %}{{ tmsg | force_escape }}</a></li>
+            </ul>
+        </nav>
+        <div class="footer-holder">
+            <ul class="footer-social-list">
+                <li class="footer-social-item">
+                    <a href="#" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-facebook"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="#" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-twitter-x-circle"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="#" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-linkedin"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="#" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-youtube"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="#" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-telegram"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="#" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-instagram"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="#" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-envelope"></use></svg>
+                    </a>
+                </li>
+            </ul>
+            <a class="footer-logo" href="{{ site.siteconfiguration.lms_url_root }}">
+                <img src="{% static 'edx.org/images/logo-footer.svg' %}" alt="rg-logo">
+            </a>
+            <p class="footer-support">
+                <a class="open-edx-link" target="_blank" href="https://open.edx.org/">
+                    <img alt="Powered by Open edX" src="https://files.edx.org/openedx-logos/open-edx-logo-tag-dark.png">
+                    <!--<img alt="Powered by Open edX" src="https://files.edx.org/openedx-logos/open-edx-logo-tag.png"> - for light footer-->
+                </a>
+                <a class="rg-link" target="_blank" rel="nofollow" href="https://raccoongang.com/">
+                    by Raccoon Gang
+                    <svg class="svg-raccoon-white"  viewBox="0 0 100 100"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#logo-raccoon" /></svg>
+                    <!--<svg class="svg-raccoon-colored"  viewBox="0 0 65 53"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#logo-raccoon-colored" /></svg> for light footer -->
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>

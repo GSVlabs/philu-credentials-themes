@@ -1,9 +1,16 @@
 .certificate {
    background: $gray-100;
 
-  a {
-    color: $info-700;
-    text-decoration-color: $info-700;
+  a,
+  a.inline-link,
+  p > a[href]:not(.btn, .rg-link) {
+    color: $base-color;
+    text-decoration-color: $base-color !important;
+
+    &:hover {
+      color: $base-color-hover;
+      text-decoration-color: $base-color-hover !important;
+    }
   }
 
   .accomplishment-rendering {

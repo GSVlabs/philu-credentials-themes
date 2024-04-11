@@ -8,6 +8,13 @@
 // ------------------------------
 // #ACCOMPLISHMENT - BASE
 // ------------------------------
+
+body {
+  font-family: $font-family-main;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-osx-font-smoothing: auto !important;
+}
+
 .accomplishment-rendering {
   margin: 2%;
   border: 1px solid $gray-500;
