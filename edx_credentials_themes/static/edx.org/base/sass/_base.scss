@@ -17,14 +17,53 @@ html, body {
     background: $white;
 }
 
+body {
+    font-size: 1rem;
+    font-family: $font-family-main;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    -moz-osx-font-smoothing: auto !important;
+}
+
 // ------------------------------
 // #TYPOGRAPHY
 // ------------------------------
-a {
-  color: $primary-500;
+a,
+.btn-link {
+  color: $base-color;
+
   &:hover {
-    color: $gray-700;
+    color: $base-color-hover;
   }
+}
+
+.btn-primary:hover {
+  background: $base-color-hover !important;
+}
+
+.btn-primary,
+.btn-outline-primary {
+  border-color: $base-color;
+
+  &:hover {
+    border-color: $base-color;
+  }
+
+  &:not(:disabled, .disabled).active,
+  &:not(:disabled, .disabled):active,
+  &:not(:disabled, .disabled):focus {
+    background-color: $base-color-hover;
+    border-color: $base-color-hover;
+    color: $white;
+  }
+}
+
+.btn-outline-primary:hover {
+    background-color: $base-color !important;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    border-color: $base-color-hover;
 }
 
 // ------------------------------
