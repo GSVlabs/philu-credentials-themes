@@ -5,47 +5,32 @@
     <div class="holder">
         <nav>
             <ul class="footer-nav-list">
-                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.lms_url_root }}/about">{% trans "About" as tmsg %}{{ tmsg | force_escape }}</a></li>
-                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.privacy_policy_url }}">{% trans "Privacy Policy" as tmsg %}{{ tmsg | force_escape }}</a></li>
-                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.tos_url }}">{% trans "Terms of Service" as tmsg %}{{ tmsg | force_escape }}</a></li>
-                <li class="footer-nav-item"><a class="footer-nav-link" href="{{ site.siteconfiguration.lms_url_root }}/support/contact_us">{% trans "Contact Us" as tmsg %}{{ tmsg | force_escape }}</a></li>
+                <li class="footer-nav-item"><a class="footer-nav-link" href="https://www.philanthropyu.org/about-us" target="_blank">{% trans "About" as tmsg %}{{ tmsg | force_escape }}</a></li>
+                <li class="footer-nav-item"><a class="footer-nav-link" href="https://www.philanthropyu.org/terms-of-use" target="_blank">{% trans "Terms of Use" as tmsg %}{{ tmsg | force_escape }}</a></li>
+                <li class="footer-nav-item"><a class="footer-nav-link" href="https://www.philanthropyu.org/privacy-policy" target="_blank">{% trans "Privacy Policy" as tmsg %}{{ tmsg | force_escape }}</a></li>
+                <li class="footer-nav-item"><a class="footer-nav-link" href="https://edx.readthedocs.io/projects/open-edx-learner-guide/en/open-release-quince.master/index.html" target="_blank">{% trans "FAQ" as tmsg %}{{ tmsg | force_escape }}</a></li>
             </ul>
         </nav>
         <div class="footer-holder">
             <ul class="footer-social-list">
                 <li class="footer-social-item">
-                    <a href="#" target="_blank" class="icon-list_link">
-                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-facebook"></use></svg>
-                    </a>
-                </li>
-                <li class="footer-social-item">
-                    <a href="#" target="_blank" class="icon-list_link">
-                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-twitter-x-circle"></use></svg>
-                    </a>
-                </li>
-                <li class="footer-social-item">
-                    <a href="#" target="_blank" class="icon-list_link">
+                    <a href="https://www.linkedin.com/company/philanthropyuniversity/" target="_blank" class="icon-list_link">
                         <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-linkedin"></use></svg>
                     </a>
                 </li>
                 <li class="footer-social-item">
-                    <a href="#" target="_blank" class="icon-list_link">
+                    <a href="https://www.facebook.com/philanthropyuniversity" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-facebook"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="https://x.com/philanthropyuni" target="_blank" class="icon-list_link">
+                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-twitter-x-circle"></use></svg>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="https://www.youtube.com/channel/UCQ6qeELvsDgIt4VO2bP0TBw" target="_blank" class="icon-list_link">
                         <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-youtube"></use></svg>
-                    </a>
-                </li>
-                <li class="footer-social-item">
-                    <a href="#" target="_blank" class="icon-list_link">
-                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-telegram"></use></svg>
-                    </a>
-                </li>
-                <li class="footer-social-item">
-                    <a href="#" target="_blank" class="icon-list_link">
-                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-instagram"></use></svg>
-                    </a>
-                </li>
-                <li class="footer-social-item">
-                    <a href="#" target="_blank" class="icon-list_link">
-                        <svg class="footer-social-icon" viewBox="0 0 35 35"><use xlink:href="{% static 'edx.org/images/svg-sprite.svg' %}#ico-envelope"></use></svg>
                     </a>
                 </li>
             </ul>

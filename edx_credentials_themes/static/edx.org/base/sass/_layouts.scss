@@ -23,12 +23,22 @@
   @extend .container;
 }
 
+.wrapper-view {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1 1 auto;
+}
+
 // ------------------------------
 // #BASE
 // ------------------------------
 // app header
 .wrapper-header {
-    border-bottom: 1px solid $gray-500;
+    border-bottom: none;
 }
 
 .header-app {
@@ -37,14 +47,15 @@
   padding: 17px 2%; // imitate LMS header spacing
 
     .logo {
-      display: block;
-      height: 45px; // match lms size
+      display: inline-block;
+      height: $header-logo-height;
       margin: 0 auto;
-      vertical-align: text-bottom;
+      vertical-align: baseline;
+      width: auto;
     }
 
     .logo-img {
-      max-width: 100%;
+      max-width: none;
       height: 100%;
       display: block;
     }

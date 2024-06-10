@@ -41,8 +41,10 @@ $line-height-large: 1.6;
 $line-height-small: 1.5;
 
 // custom brand colors
-$base-color: #c16800;
+$base-color: #61b4e4;
 $base-color-hover: darken($base-color, 20%);
+$header-bg: #083954;
+$header-logo-height: 29px;
 
 // don't link style me, bro!
 %reset-link {
@@ -82,13 +84,13 @@ $base-color-hover: darken($base-color, 20%);
   letter-spacing: 0.0625rem;
 }
 
-$font-family-main: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-main: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // RG footer variables
-$footer-bg: #2b2422;
+$footer-bg: $header-bg;
 $footer-nav-link-color: #fff;
 $footer-nav-link-color-hover: darken($footer-nav-link-color, 20%);
-$footer-logo-height: 45px;
+$footer-logo-height: 60px;
 $footer-support-text-and-logo: #fff;
-$footer-social-link-bg: #ffdf8c;
+$footer-social-link-bg: #00afaa;
 $footer-social-link-bg-hover: lighten($footer-social-link-bg, 20%);
