@@ -15,7 +15,7 @@
 .wrapper-header {
     @extend %divider-2;
     border-bottom-color: $gray-200;
-    background: $white;
+    background: $header-bg;
 }
 
 .header-app {
@@ -31,7 +31,7 @@
 // ------------------------------
 .wrapper-banner-user {
   background-color: $primary-500;
-  border-top: 1px solid $gray-400;
+  border-top: none;
   border-bottom: 1px solid $gray-400;
   color: $gray-100;
 }
